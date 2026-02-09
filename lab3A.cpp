@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+#include <string>
+using std::string;
+
+#include <cstdlib>
+
 struct Restaurant {
 	string name;
 	string address; 
@@ -12,8 +17,9 @@ struct Restaurant {
 Restaurant tempRest();
 void coutRest(Restaurant r);
 
-int main{
-
+int main(){
+	Restaurant r1 = tempRest();
+    coutRest(r1);
 
 }
 
@@ -34,11 +40,21 @@ Restaurant tempRest() {
 	cin >> buf; temp.rating = atoi(buf.c_str());
 	cin.ignore(1000, 10);
 
-	cout << "Enter phnoe number: ";
+	cout << "Enter phone number: ";
 	cin >> buf; temp.phoneNum = atoi(buf.c_str());
 	cin.ignore(1000, 10);
 
 	cout << endl;
 	
 	return temp;
+}
+
+void coutRest(Restaurant r) {
+	cout << "-----------------------------" << endl;
+	cout << "Restaurant Name : " << r.name << endl;
+	cout << "Address         : " << r.address << endl;
+	cout << "Type of Food    : " << r.type << endl;
+	cout << "Rating          : " << r.rating << endl;
+	cout << "Phone Number    : " << r.phoneNum << endl;
+	cout << endl;
 }
