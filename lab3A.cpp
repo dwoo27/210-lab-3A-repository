@@ -19,7 +19,14 @@ void coutRest(Restaurant r);
 
 int main(){
 	Restaurant r1 = tempRest();
-    coutRest(r1);
+	Restaurant r2 = tempRest();
+	Restaurant r3 = tempRest();
+	Restaurant r4 = tempRest();
+	
+	coutRest(r1);
+	coutRest(r2);
+	coutRest(r3);
+	coutRest(r4);
 
 }
 
