@@ -39,6 +39,6 @@ Restaurant tempRest() {
 	cin.ignore(1000, 10);
 
 	cout << endl;
-
+	
 	return temp;
 }
